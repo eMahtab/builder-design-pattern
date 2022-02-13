@@ -2,9 +2,10 @@
 
 
 ### User.java
-package builder;
 
 ```java
+package builder;
+
 public class User {
     private String firstName;
     private String lastName;
