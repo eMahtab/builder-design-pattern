@@ -1,7 +1,7 @@
 # Builder Pattern
 
 
-
+### User.java
 ```java
 public class User {
     private String firstName;
@@ -77,4 +77,23 @@ public class User {
 
 ```
 
+### App.java
+```java
+import builder.User.UserBuilder;
 
+public class App {
+	public static void main(String[] args) {
+		UserBuilder userBuilder =  new User.UserBuilder();
+		User user = userBuilder.setFirstName("Mahtab")
+				   .setLastName("Alam")
+				   .setEmail("test@gmail.com")
+				   .setCountry("India")
+				   .setMobileNumber("9999999999")
+				   .setGender("Male")
+				   .setPincode("309832")
+				   .build();
+		
+		System.out.println(user);			
+	}
+}
+```
